@@ -1,0 +1,11 @@
+DATA TYPES OF JAVASCRIPT
+
+1)String-textual data
+2)number-integer or floating point
+3)BigInt-integer with arbitary precision
+4)Boolean-returns true or false
+5)symbol-instance are unique and immutable
+6)Object-key value pairs
+7)Null-retunrs null value
+8)undefined-variable is not initiable
+9)Array-collection of data
