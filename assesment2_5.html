@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+   </script>
+    
+</head>
+<body style="text-align: center;font-size: larger;">
+    <h1> jQuery Task
+    </h1>
+    <form id="form1">
+        <input type="text" id="name" placeholder="NAME"  maxlength="20" required ><br>
+        <!-- <p style="color:red">* this is a rquired field</p> -->
+        <br>
+        <input type="email" id="email" placeholder="E-mail" maxlength="35"><br><br>
+        <!-- <button type="button" ondblclick="myfunction1">SUBMIT</button> -->
+        <p id="a1">register</p>
+    </form>
+<script>
+    $(document).ready(function(){
+  $("p").mouseenter(function(e){
+    e.preventDefault();
+        var a = $('#name').val();
+        var b = $('#email').val();    
+
+         if (a.length === 0) {
+                    alert('This field is mandatory.');
+            // return;
+              }
+        if (a.length > 20) {
+                  alert('Field should not exceed 20 characters.');
+                    //  return;
+             }
+         if (b.length > 35) {
+        alert('Feild should not exceed 35 characters.');
+        return;
+      }
+         });
+    });
+    //  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+
+    </script>
+    
+</body>
+</html>
