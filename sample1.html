@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="javascp.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="diplays">
+        <label for="name">NAME:</label>
+        <input type="text" id="name" style="outline: none;"><div id="ress"></div>
+        <br>
+        <label for="number">NUMBER:</label>
+        <input type="number" id="number">
+        <br><br>
+        <label for="email">EMAIL:</label>
+        <input type="email" id="email">
+        <br><br>
+        <button  onclick="emp()" value="Add">Add Employee Details</button>
+        </div>
+        <div id="display">
+                <h4>Employee Record</b></h4>
+                <center>
+                 <table id="tableData" border="1" cellpadding="2">
+                  <tr>
+                   <th><b>Name</b></th>
+                   <th><b>Number</b></th>
+                   <th><b>Email Id</b></th>
+                   <th><b> action</b></th>
+                  </tr>
+                 </table>
+                </center>
+        </div>
+        <script>
+          function emp()
+{
+    var name = document.getElementById("name");
+    var number = document.getElementById("number");
+    var email = document.getElementById("email");
+    var table = document.getElementById("tableData");
+    var rowCount = table.rows.length;
+    var row = table.insertRow(rowCount);
+    row.insertCell(0).innerHTML= name.value;
+    row.insertCell(1).innerHTML= number.value;
+    row.insertCell(2).innerHTML= email.value;
+    row.insertCell(3).innerHTML='<button class="onedit">edit</button> <button class="ondelete">delete</button>';
+}
+$(document).on('click','.ondelete',function(){
+    $(this).closest('tr').remove();
+})
+    $(document).ready(function(){
+        $("#name").hover(function(){
+            var ress=document.getElementById("ress");
+            ress.innerText="this name field is important"},
+        function(){
+            var ress=document.getElementById("ress");
+            ress.innerText="";
+        });
+    /*$("#name").blur(function(){
+            var text="";
+            document.getElementById("demo").innerHTML=text;
+        })*/
+    })
+
+        </script>
+</body>
+</html>
