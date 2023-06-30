@@ -1,0 +1,22 @@
+1.Interface & Abstract class
+   Interface is used for 100% abstraction.
+   It support multiple inheritnce.
+   In this class,abstract class is defined by default,we need not to define.If we define it will show error.
+
+    Abstarct class is used for obtaining partial abstarction.
+
+2.Object & Constructor
+
+   Object-A object is the combination of data member's and member function's.
+   The data member is the property of the object and the methods are the function's performed by the object.
+
+   Constructor- Constructor is method to initialize object.The constructor name is the same as the class name.
+    A class can have many number of constructors.
+
+3.Virtual & override keyword
+	
+	Virtual keyword is used in the parent class for  method overriding.
+	Override keyword is used in the derived class for oveeriding the member function in base class.
+
+4.Sealed class
+	Sealed class cannot be inherited.so,it cannot be a parent class or abstract class.
